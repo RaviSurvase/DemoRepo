@@ -10,7 +10,7 @@ import utils.ReadXlFiles;
 
 import java.io.IOException;
 
-public class RahulShettyTest_com {
+public class TestWebsite {
     WebDriver driver;
     ReadPropeties rp = new ReadPropeties();
     BrowserSetUp bs = new BrowserSetUp();
@@ -28,18 +28,16 @@ public class RahulShettyTest_com {
     public void setUp(@Optional("chrome") String browser) throws Exception {
 
 
-        driver = bs.browserSetUp(browser);
-        driver.get(rp.ReadProperty("./src/main/resources/config.properties", "url1"));
-        driver.manage().window().maximize();
+//        driver = bs.browserSetUp(browser);
+//        driver.get(rp.ReadProperty("./src/main/resources/config.properties", "url1"));
+//        driver.manage().window().maximize();
     }
 
     @Test(dataProvider = "DataFromXLSheetByUsingDataProvider")
     public void FirstTestCase(String keyword) throws IOException {
-        System.out.println("Title of the current page : "+driver.getTitle());
-        EnterData search = new EnterData(driver);
-//        ReadXlFiles readXlFiles = new ReadXlFiles();
-//        Object[][] data = readXlFiles.readXlData("src/main/resources/TestDataFile.xlsx", "Sheet1");
-        search.enterKeyword(keyword);
+//        System.out.println("Title of the current page : "+driver.getTitle());
+//        EnterData search = new EnterData(driver);
+//        search.enterKeyword(keyword);
 
     }
 
